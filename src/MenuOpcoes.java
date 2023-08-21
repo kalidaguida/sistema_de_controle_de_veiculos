@@ -1,10 +1,7 @@
 import java.text.Collator;
 
 public class MenuOpcoes {
-    private static Passeio passeio = new Passeio();
-    private static Carga carga = new Carga();
     private static final Leitura leitura = Leitura.getLeituraUnico();
-
     public static void iniciaMenu() {
         boolean continua = true;
         int opcao;
@@ -36,7 +33,7 @@ public class MenuOpcoes {
             switch (opcao) {
                 case 1 -> {
                     boolean sim = true;
-                    passeio = new Passeio();
+                    Passeio passeio = new Passeio();
                     passeio = BDVeiculos.cadastrarPasseio(passeio);
                     System.out.println("\nVeiculo cadastrado!");
 
@@ -59,7 +56,7 @@ public class MenuOpcoes {
 
                 case 2 -> {
                     boolean sim = true;
-                    carga = new Carga();
+                    Carga carga = new Carga();
                     carga = BDVeiculos.cadastrarCarga(carga);
                     System.out.println("\nVeiculo cadastrado!");
 
@@ -92,7 +89,6 @@ public class MenuOpcoes {
                 case 8 -> BDVeiculos.excluiPlacaCarga();
 
                 case 9 -> System.exit(0);
-
                 default -> leitura.entDados("\nO valor deve ser de 1 a 9. Pressione <ENTER> para continuar...");
             }
         }
