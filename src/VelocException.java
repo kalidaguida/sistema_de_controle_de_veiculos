@@ -1,8 +1,13 @@
+import javax.swing.*;
+
 public class VelocException extends Exception {
 
     public void impMsgVelocMax() {
-        System.out.println("\n======================= ATENCAO! =======================");
-        System.out.println("A velocidade máxima está fora dos limites brasileiros\n");
+        JOptionPane.showMessageDialog(null,
+                "A velocidade máxima está fora dos limites brasileiros\n",
+                "ATENCAO!",
+                JOptionPane.ERROR_MESSAGE
+        );
     }
 
     public Veiculo correcaoVelocMax(Veiculo veiculo) {

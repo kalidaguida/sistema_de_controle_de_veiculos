@@ -1,6 +1,13 @@
+import javax.swing.*;
+
 public class VeicExistException extends Exception {
 
-    public VeicExistException() {
-        System.out.println("\nJá existe um veículo com esta placa");
+        public void impVeicExistException() {
+
+        JOptionPane.showMessageDialog(null,
+                "Já existe um veículo com esta placa!",
+                "Erro de cadastro",
+                JOptionPane.ERROR_MESSAGE
+        );
     }
 }
